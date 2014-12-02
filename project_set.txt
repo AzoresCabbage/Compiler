@@ -1,0 +1,971 @@
+I0:
+S -> ，int main ( ) { MAIN  , #
+S' -> ，S  , #
+I1:
+S' -> S ， , #
+I2:
+S -> int ，main ( ) { MAIN  , #
+I3:
+S -> int main ，( ) { MAIN  , #
+I4:
+S -> int main ( ，) { MAIN  , #
+I5:
+S -> int main ( ) ，{ MAIN  , #
+I6:
+BLOCK -> ，{ EXP }  , #identifer
+BLOCK -> ，{ EXP }  , char
+BLOCK -> ，{ EXP }  , float
+BLOCK -> ，{ EXP }  , if
+BLOCK -> ，{ EXP }  , int
+BLOCK -> ，{ EXP }  , return
+BLOCK -> ，{ EXP }  , while
+BLOCK -> ，{ EXP }  , {
+ELSECAUSE -> ，IFCAUSE BLOCK else  , {
+END -> ，return #number ; }  , #
+EXP -> ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，#identifer #operator #identifer SEMICOLON  , char
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , char
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , char
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , char
+EXP -> ，#identifer #operator #identifer SEMICOLON  , float
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , float
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , float
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , float
+EXP -> ，#identifer #operator #identifer SEMICOLON  , if
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , if
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , if
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , if
+EXP -> ，#identifer #operator #identifer SEMICOLON  , int
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , int
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , int
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , int
+EXP -> ，#identifer #operator #identifer SEMICOLON  , return
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , return
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , return
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , return
+EXP -> ，#identifer #operator #identifer SEMICOLON  , while
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , while
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , while
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , while
+EXP -> ，#identifer #operator #identifer SEMICOLON  , {
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , {
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , {
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , {
+IFBLOCK -> ，ELSECAUSE BLOCK  , #identifer
+IFBLOCK -> ，IFCAUSE BLOCK  , #identifer
+IFBLOCK -> ，ELSECAUSE BLOCK  , char
+IFBLOCK -> ，IFCAUSE BLOCK  , char
+IFBLOCK -> ，ELSECAUSE BLOCK  , float
+IFBLOCK -> ，IFCAUSE BLOCK  , float
+IFBLOCK -> ，ELSECAUSE BLOCK  , if
+IFBLOCK -> ，IFCAUSE BLOCK  , if
+IFBLOCK -> ，ELSECAUSE BLOCK  , int
+IFBLOCK -> ，IFCAUSE BLOCK  , int
+IFBLOCK -> ，ELSECAUSE BLOCK  , return
+IFBLOCK -> ，IFCAUSE BLOCK  , return
+IFBLOCK -> ，ELSECAUSE BLOCK  , while
+IFBLOCK -> ，IFCAUSE BLOCK  , while
+IFBLOCK -> ，ELSECAUSE BLOCK  , {
+IFBLOCK -> ，IFCAUSE BLOCK  , {
+IFCAUSE -> ，if ( #identifer #operator #identifer #operator #identifer )  , {
+MAIN -> ，END  , #
+MAIN -> ，PROGRAM END  , #
+PROGRAM -> ，BLOCK  , #identifer
+PROGRAM -> ，EXP  , #identifer
+PROGRAM -> ，IFBLOCK  , #identifer
+PROGRAM -> ，STATEMENT  , #identifer
+PROGRAM -> ，WHILEBLOCK  , #identifer
+PROGRAM -> ，PROGRAM BLOCK  , #identifer
+PROGRAM -> ，PROGRAM EXP  , #identifer
+PROGRAM -> ，PROGRAM IFBLOCK  , #identifer
+PROGRAM -> ，PROGRAM STATEMENT  , #identifer
+PROGRAM -> ，PROGRAM WHILEBLOCK  , #identifer
+PROGRAM -> ，BLOCK  , char
+PROGRAM -> ，EXP  , char
+PROGRAM -> ，IFBLOCK  , char
+PROGRAM -> ，STATEMENT  , char
+PROGRAM -> ，WHILEBLOCK  , char
+PROGRAM -> ，PROGRAM BLOCK  , char
+PROGRAM -> ，PROGRAM EXP  , char
+PROGRAM -> ，PROGRAM IFBLOCK  , char
+PROGRAM -> ，PROGRAM STATEMENT  , char
+PROGRAM -> ，PROGRAM WHILEBLOCK  , char
+PROGRAM -> ，BLOCK  , float
+PROGRAM -> ，EXP  , float
+PROGRAM -> ，IFBLOCK  , float
+PROGRAM -> ，STATEMENT  , float
+PROGRAM -> ，WHILEBLOCK  , float
+PROGRAM -> ，PROGRAM BLOCK  , float
+PROGRAM -> ，PROGRAM EXP  , float
+PROGRAM -> ，PROGRAM IFBLOCK  , float
+PROGRAM -> ，PROGRAM STATEMENT  , float
+PROGRAM -> ，PROGRAM WHILEBLOCK  , float
+PROGRAM -> ，BLOCK  , if
+PROGRAM -> ，EXP  , if
+PROGRAM -> ，IFBLOCK  , if
+PROGRAM -> ，STATEMENT  , if
+PROGRAM -> ，WHILEBLOCK  , if
+PROGRAM -> ，PROGRAM BLOCK  , if
+PROGRAM -> ，PROGRAM EXP  , if
+PROGRAM -> ，PROGRAM IFBLOCK  , if
+PROGRAM -> ，PROGRAM STATEMENT  , if
+PROGRAM -> ，PROGRAM WHILEBLOCK  , if
+PROGRAM -> ，BLOCK  , int
+PROGRAM -> ，EXP  , int
+PROGRAM -> ，IFBLOCK  , int
+PROGRAM -> ，STATEMENT  , int
+PROGRAM -> ，WHILEBLOCK  , int
+PROGRAM -> ，PROGRAM BLOCK  , int
+PROGRAM -> ，PROGRAM EXP  , int
+PROGRAM -> ，PROGRAM IFBLOCK  , int
+PROGRAM -> ，PROGRAM STATEMENT  , int
+PROGRAM -> ，PROGRAM WHILEBLOCK  , int
+PROGRAM -> ，BLOCK  , return
+PROGRAM -> ，EXP  , return
+PROGRAM -> ，IFBLOCK  , return
+PROGRAM -> ，STATEMENT  , return
+PROGRAM -> ，WHILEBLOCK  , return
+PROGRAM -> ，PROGRAM BLOCK  , return
+PROGRAM -> ，PROGRAM EXP  , return
+PROGRAM -> ，PROGRAM IFBLOCK  , return
+PROGRAM -> ，PROGRAM STATEMENT  , return
+PROGRAM -> ，PROGRAM WHILEBLOCK  , return
+PROGRAM -> ，BLOCK  , while
+PROGRAM -> ，EXP  , while
+PROGRAM -> ，IFBLOCK  , while
+PROGRAM -> ，STATEMENT  , while
+PROGRAM -> ，WHILEBLOCK  , while
+PROGRAM -> ，PROGRAM BLOCK  , while
+PROGRAM -> ，PROGRAM EXP  , while
+PROGRAM -> ，PROGRAM IFBLOCK  , while
+PROGRAM -> ，PROGRAM STATEMENT  , while
+PROGRAM -> ，PROGRAM WHILEBLOCK  , while
+PROGRAM -> ，BLOCK  , {
+PROGRAM -> ，EXP  , {
+PROGRAM -> ，IFBLOCK  , {
+PROGRAM -> ，STATEMENT  , {
+PROGRAM -> ，WHILEBLOCK  , {
+PROGRAM -> ，PROGRAM BLOCK  , {
+PROGRAM -> ，PROGRAM EXP  , {
+PROGRAM -> ，PROGRAM IFBLOCK  , {
+PROGRAM -> ，PROGRAM STATEMENT  , {
+PROGRAM -> ，PROGRAM WHILEBLOCK  , {
+STATEMENT -> ，VARLIST SEMICOLON  , #identifer
+STATEMENT -> ，VARLIST SEMICOLON  , char
+STATEMENT -> ，VARLIST SEMICOLON  , float
+STATEMENT -> ，VARLIST SEMICOLON  , if
+STATEMENT -> ，VARLIST SEMICOLON  , int
+STATEMENT -> ，VARLIST SEMICOLON  , return
+STATEMENT -> ，VARLIST SEMICOLON  , while
+STATEMENT -> ，VARLIST SEMICOLON  , {
+VARLIST -> ，char #identifer  , ,
+VARLIST -> ，float #identifer  , ,
+VARLIST -> ，int #identifer  , ,
+VARLIST -> ，VARLIST , #identifer  , ,
+VARLIST -> ，char #identifer  , ;
+VARLIST -> ，float #identifer  , ;
+VARLIST -> ，int #identifer  , ;
+VARLIST -> ，VARLIST , #identifer  , ;
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , #identifer
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , char
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , float
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , if
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , int
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , return
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , while
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , {
+WHILECAUSE -> ，while ( #identifer #operator #identifer #operator #identifer )  , {
+S -> int main ( ) { ，MAIN  , #
+I7:
+EXP -> #identifer ，#operator #identifer SEMICOLON  , #identifer
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> #identifer ，#operator #identifer SEMICOLON  , char
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , char
+EXP -> #identifer ，#operator #identifer SEMICOLON  , float
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , float
+EXP -> #identifer ，#operator #identifer SEMICOLON  , if
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , if
+EXP -> #identifer ，#operator #identifer SEMICOLON  , int
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , int
+EXP -> #identifer ，#operator #identifer SEMICOLON  , return
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , return
+EXP -> #identifer ，#operator #identifer SEMICOLON  , while
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , while
+EXP -> #identifer ，#operator #identifer SEMICOLON  , {
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , {
+I8:
+PROGRAM -> BLOCK ， , #identifer
+PROGRAM -> BLOCK ， , char
+PROGRAM -> BLOCK ， , float
+PROGRAM -> BLOCK ， , if
+PROGRAM -> BLOCK ， , int
+PROGRAM -> BLOCK ， , return
+PROGRAM -> BLOCK ， , while
+PROGRAM -> BLOCK ， , {
+I9:
+BLOCK -> ，{ EXP }  , #identifer
+BLOCK -> ，{ EXP }  , char
+BLOCK -> ，{ EXP }  , float
+BLOCK -> ，{ EXP }  , if
+BLOCK -> ，{ EXP }  , int
+BLOCK -> ，{ EXP }  , return
+BLOCK -> ，{ EXP }  , while
+BLOCK -> ，{ EXP }  , {
+IFBLOCK -> ELSECAUSE ，BLOCK  , #identifer
+IFBLOCK -> ELSECAUSE ，BLOCK  , char
+IFBLOCK -> ELSECAUSE ，BLOCK  , float
+IFBLOCK -> ELSECAUSE ，BLOCK  , if
+IFBLOCK -> ELSECAUSE ，BLOCK  , int
+IFBLOCK -> ELSECAUSE ，BLOCK  , return
+IFBLOCK -> ELSECAUSE ，BLOCK  , while
+IFBLOCK -> ELSECAUSE ，BLOCK  , {
+I10:
+MAIN -> END ， , #
+I11:
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , char
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , char
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , float
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , float
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , if
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , if
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , int
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , int
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , return
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , return
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , while
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , while
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , {
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , {
+PROGRAM -> EXP ， , #identifer
+PROGRAM -> EXP ， , char
+PROGRAM -> EXP ， , float
+PROGRAM -> EXP ， , if
+PROGRAM -> EXP ， , int
+PROGRAM -> EXP ， , return
+PROGRAM -> EXP ， , while
+PROGRAM -> EXP ， , {
+I12:
+PROGRAM -> IFBLOCK ， , #identifer
+PROGRAM -> IFBLOCK ， , char
+PROGRAM -> IFBLOCK ， , float
+PROGRAM -> IFBLOCK ， , if
+PROGRAM -> IFBLOCK ， , int
+PROGRAM -> IFBLOCK ， , return
+PROGRAM -> IFBLOCK ， , while
+PROGRAM -> IFBLOCK ， , {
+I13:
+BLOCK -> ，{ EXP }  , #identifer
+BLOCK -> ，{ EXP }  , char
+BLOCK -> ，{ EXP }  , else
+BLOCK -> ，{ EXP }  , float
+BLOCK -> ，{ EXP }  , if
+BLOCK -> ，{ EXP }  , int
+BLOCK -> ，{ EXP }  , return
+BLOCK -> ，{ EXP }  , while
+BLOCK -> ，{ EXP }  , {
+ELSECAUSE -> IFCAUSE ，BLOCK else  , {
+IFBLOCK -> IFCAUSE ，BLOCK  , #identifer
+IFBLOCK -> IFCAUSE ，BLOCK  , char
+IFBLOCK -> IFCAUSE ，BLOCK  , float
+IFBLOCK -> IFCAUSE ，BLOCK  , if
+IFBLOCK -> IFCAUSE ，BLOCK  , int
+IFBLOCK -> IFCAUSE ，BLOCK  , return
+IFBLOCK -> IFCAUSE ，BLOCK  , while
+IFBLOCK -> IFCAUSE ，BLOCK  , {
+I14:
+S -> int main ( ) { MAIN ， , #
+I15:
+BLOCK -> ，{ EXP }  , #identifer
+BLOCK -> ，{ EXP }  , char
+BLOCK -> ，{ EXP }  , float
+BLOCK -> ，{ EXP }  , if
+BLOCK -> ，{ EXP }  , int
+BLOCK -> ，{ EXP }  , return
+BLOCK -> ，{ EXP }  , while
+BLOCK -> ，{ EXP }  , {
+ELSECAUSE -> ，IFCAUSE BLOCK else  , {
+END -> ，return #number ; }  , #
+EXP -> ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，#identifer #operator #identifer SEMICOLON  , char
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , char
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , char
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , char
+EXP -> ，#identifer #operator #identifer SEMICOLON  , float
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , float
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , float
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , float
+EXP -> ，#identifer #operator #identifer SEMICOLON  , if
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , if
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , if
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , if
+EXP -> ，#identifer #operator #identifer SEMICOLON  , int
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , int
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , int
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , int
+EXP -> ，#identifer #operator #identifer SEMICOLON  , return
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , return
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , return
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , return
+EXP -> ，#identifer #operator #identifer SEMICOLON  , while
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , while
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , while
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , while
+EXP -> ，#identifer #operator #identifer SEMICOLON  , {
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , {
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , {
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , {
+IFBLOCK -> ，ELSECAUSE BLOCK  , #identifer
+IFBLOCK -> ，IFCAUSE BLOCK  , #identifer
+IFBLOCK -> ，ELSECAUSE BLOCK  , char
+IFBLOCK -> ，IFCAUSE BLOCK  , char
+IFBLOCK -> ，ELSECAUSE BLOCK  , float
+IFBLOCK -> ，IFCAUSE BLOCK  , float
+IFBLOCK -> ，ELSECAUSE BLOCK  , if
+IFBLOCK -> ，IFCAUSE BLOCK  , if
+IFBLOCK -> ，ELSECAUSE BLOCK  , int
+IFBLOCK -> ，IFCAUSE BLOCK  , int
+IFBLOCK -> ，ELSECAUSE BLOCK  , return
+IFBLOCK -> ，IFCAUSE BLOCK  , return
+IFBLOCK -> ，ELSECAUSE BLOCK  , while
+IFBLOCK -> ，IFCAUSE BLOCK  , while
+IFBLOCK -> ，ELSECAUSE BLOCK  , {
+IFBLOCK -> ，IFCAUSE BLOCK  , {
+IFCAUSE -> ，if ( #identifer #operator #identifer #operator #identifer )  , {
+STATEMENT -> ，VARLIST SEMICOLON  , #identifer
+STATEMENT -> ，VARLIST SEMICOLON  , char
+STATEMENT -> ，VARLIST SEMICOLON  , float
+STATEMENT -> ，VARLIST SEMICOLON  , if
+STATEMENT -> ，VARLIST SEMICOLON  , int
+STATEMENT -> ，VARLIST SEMICOLON  , return
+STATEMENT -> ，VARLIST SEMICOLON  , while
+STATEMENT -> ，VARLIST SEMICOLON  , {
+VARLIST -> ，char #identifer  , ,
+VARLIST -> ，float #identifer  , ,
+VARLIST -> ，int #identifer  , ,
+VARLIST -> ，VARLIST , #identifer  , ,
+VARLIST -> ，char #identifer  , ;
+VARLIST -> ，float #identifer  , ;
+VARLIST -> ，int #identifer  , ;
+VARLIST -> ，VARLIST , #identifer  , ;
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , #identifer
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , char
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , float
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , if
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , int
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , return
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , while
+WHILEBLOCK -> ，WHILECAUSE BLOCK  , {
+WHILECAUSE -> ，while ( #identifer #operator #identifer #operator #identifer )  , {
+MAIN -> PROGRAM ，END  , #
+PROGRAM -> PROGRAM ，BLOCK  , #identifer
+PROGRAM -> PROGRAM ，EXP  , #identifer
+PROGRAM -> PROGRAM ，IFBLOCK  , #identifer
+PROGRAM -> PROGRAM ，STATEMENT  , #identifer
+PROGRAM -> PROGRAM ，WHILEBLOCK  , #identifer
+PROGRAM -> PROGRAM ，BLOCK  , char
+PROGRAM -> PROGRAM ，EXP  , char
+PROGRAM -> PROGRAM ，IFBLOCK  , char
+PROGRAM -> PROGRAM ，STATEMENT  , char
+PROGRAM -> PROGRAM ，WHILEBLOCK  , char
+PROGRAM -> PROGRAM ，BLOCK  , float
+PROGRAM -> PROGRAM ，EXP  , float
+PROGRAM -> PROGRAM ，IFBLOCK  , float
+PROGRAM -> PROGRAM ，STATEMENT  , float
+PROGRAM -> PROGRAM ，WHILEBLOCK  , float
+PROGRAM -> PROGRAM ，BLOCK  , if
+PROGRAM -> PROGRAM ，EXP  , if
+PROGRAM -> PROGRAM ，IFBLOCK  , if
+PROGRAM -> PROGRAM ，STATEMENT  , if
+PROGRAM -> PROGRAM ，WHILEBLOCK  , if
+PROGRAM -> PROGRAM ，BLOCK  , int
+PROGRAM -> PROGRAM ，EXP  , int
+PROGRAM -> PROGRAM ，IFBLOCK  , int
+PROGRAM -> PROGRAM ，STATEMENT  , int
+PROGRAM -> PROGRAM ，WHILEBLOCK  , int
+PROGRAM -> PROGRAM ，BLOCK  , return
+PROGRAM -> PROGRAM ，EXP  , return
+PROGRAM -> PROGRAM ，IFBLOCK  , return
+PROGRAM -> PROGRAM ，STATEMENT  , return
+PROGRAM -> PROGRAM ，WHILEBLOCK  , return
+PROGRAM -> PROGRAM ，BLOCK  , while
+PROGRAM -> PROGRAM ，EXP  , while
+PROGRAM -> PROGRAM ，IFBLOCK  , while
+PROGRAM -> PROGRAM ，STATEMENT  , while
+PROGRAM -> PROGRAM ，WHILEBLOCK  , while
+PROGRAM -> PROGRAM ，BLOCK  , {
+PROGRAM -> PROGRAM ，EXP  , {
+PROGRAM -> PROGRAM ，IFBLOCK  , {
+PROGRAM -> PROGRAM ，STATEMENT  , {
+PROGRAM -> PROGRAM ，WHILEBLOCK  , {
+I16:
+PROGRAM -> STATEMENT ， , #identifer
+PROGRAM -> STATEMENT ， , char
+PROGRAM -> STATEMENT ， , float
+PROGRAM -> STATEMENT ， , if
+PROGRAM -> STATEMENT ， , int
+PROGRAM -> STATEMENT ， , return
+PROGRAM -> STATEMENT ， , while
+PROGRAM -> STATEMENT ， , {
+I17:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , char
+SEMICOLON -> ，;  , float
+SEMICOLON -> ，;  , if
+SEMICOLON -> ，;  , int
+SEMICOLON -> ，;  , return
+SEMICOLON -> ，;  , while
+SEMICOLON -> ，;  , {
+STATEMENT -> VARLIST ，SEMICOLON  , #identifer
+STATEMENT -> VARLIST ，SEMICOLON  , char
+STATEMENT -> VARLIST ，SEMICOLON  , float
+STATEMENT -> VARLIST ，SEMICOLON  , if
+STATEMENT -> VARLIST ，SEMICOLON  , int
+STATEMENT -> VARLIST ，SEMICOLON  , return
+STATEMENT -> VARLIST ，SEMICOLON  , while
+STATEMENT -> VARLIST ，SEMICOLON  , {
+VARLIST -> VARLIST ，, #identifer  , ,
+VARLIST -> VARLIST ，, #identifer  , ;
+I18:
+PROGRAM -> WHILEBLOCK ， , #identifer
+PROGRAM -> WHILEBLOCK ， , char
+PROGRAM -> WHILEBLOCK ， , float
+PROGRAM -> WHILEBLOCK ， , if
+PROGRAM -> WHILEBLOCK ， , int
+PROGRAM -> WHILEBLOCK ， , return
+PROGRAM -> WHILEBLOCK ， , while
+PROGRAM -> WHILEBLOCK ， , {
+I19:
+BLOCK -> ，{ EXP }  , #identifer
+BLOCK -> ，{ EXP }  , char
+BLOCK -> ，{ EXP }  , float
+BLOCK -> ，{ EXP }  , if
+BLOCK -> ，{ EXP }  , int
+BLOCK -> ，{ EXP }  , return
+BLOCK -> ，{ EXP }  , while
+BLOCK -> ，{ EXP }  , {
+WHILEBLOCK -> WHILECAUSE ，BLOCK  , #identifer
+WHILEBLOCK -> WHILECAUSE ，BLOCK  , char
+WHILEBLOCK -> WHILECAUSE ，BLOCK  , float
+WHILEBLOCK -> WHILECAUSE ，BLOCK  , if
+WHILEBLOCK -> WHILECAUSE ，BLOCK  , int
+WHILEBLOCK -> WHILECAUSE ，BLOCK  , return
+WHILEBLOCK -> WHILECAUSE ，BLOCK  , while
+WHILEBLOCK -> WHILECAUSE ，BLOCK  , {
+I20:
+VARLIST -> char ，#identifer  , ,
+VARLIST -> char ，#identifer  , ;
+I21:
+VARLIST -> float ，#identifer  , ,
+VARLIST -> float ，#identifer  , ;
+I22:
+IFCAUSE -> if ，( #identifer #operator #identifer #operator #identifer )  , {
+I23:
+VARLIST -> int ，#identifer  , ,
+VARLIST -> int ，#identifer  , ;
+I24:
+END -> return ，#number ; }  , #
+I25:
+WHILECAUSE -> while ，( #identifer #operator #identifer #operator #identifer )  , {
+I26:
+EXP -> ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，#identifer #operator #identifer SEMICOLON  , }
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , }
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , }
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , }
+BLOCK -> { ，EXP }  , #identifer
+BLOCK -> { ，EXP }  , char
+BLOCK -> { ，EXP }  , float
+BLOCK -> { ，EXP }  , if
+BLOCK -> { ，EXP }  , int
+BLOCK -> { ，EXP }  , return
+BLOCK -> { ，EXP }  , while
+BLOCK -> { ，EXP }  , {
+I27:
+EXP -> #identifer #operator ，#identifer SEMICOLON  , #identifer
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> #identifer #operator ，#identifer SEMICOLON  , char
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , char
+EXP -> #identifer #operator ，#identifer SEMICOLON  , float
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , float
+EXP -> #identifer #operator ，#identifer SEMICOLON  , if
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , if
+EXP -> #identifer #operator ，#identifer SEMICOLON  , int
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , int
+EXP -> #identifer #operator ，#identifer SEMICOLON  , return
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , return
+EXP -> #identifer #operator ，#identifer SEMICOLON  , while
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , while
+EXP -> #identifer #operator ，#identifer SEMICOLON  , {
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , {
+I28:
+IFBLOCK -> ELSECAUSE BLOCK ， , #identifer
+IFBLOCK -> ELSECAUSE BLOCK ， , char
+IFBLOCK -> ELSECAUSE BLOCK ， , float
+IFBLOCK -> ELSECAUSE BLOCK ， , if
+IFBLOCK -> ELSECAUSE BLOCK ， , int
+IFBLOCK -> ELSECAUSE BLOCK ， , return
+IFBLOCK -> ELSECAUSE BLOCK ， , while
+IFBLOCK -> ELSECAUSE BLOCK ， , {
+I29:
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , char
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , char
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , float
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , float
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , if
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , if
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , int
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , int
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , return
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , return
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , while
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , while
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , {
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , {
+I30:
+ELSECAUSE -> IFCAUSE BLOCK ，else  , {
+IFBLOCK -> IFCAUSE BLOCK ， , #identifer
+IFBLOCK -> IFCAUSE BLOCK ， , char
+IFBLOCK -> IFCAUSE BLOCK ， , float
+IFBLOCK -> IFCAUSE BLOCK ， , if
+IFBLOCK -> IFCAUSE BLOCK ， , int
+IFBLOCK -> IFCAUSE BLOCK ， , return
+IFBLOCK -> IFCAUSE BLOCK ， , while
+IFBLOCK -> IFCAUSE BLOCK ， , {
+I31:
+EXP -> ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> ，#identifer #operator #identifer SEMICOLON  , }
+EXP -> ，EXP #identifer #operator #identifer SEMICOLON  , }
+EXP -> ，#identifer #operator #identifer #operator #identifer SEMICOLON  , }
+EXP -> ，EXP #identifer #operator #identifer #operator #identifer SEMICOLON  , }
+BLOCK -> { ，EXP }  , #identifer
+BLOCK -> { ，EXP }  , char
+BLOCK -> { ，EXP }  , else
+BLOCK -> { ，EXP }  , float
+BLOCK -> { ，EXP }  , if
+BLOCK -> { ，EXP }  , int
+BLOCK -> { ，EXP }  , return
+BLOCK -> { ，EXP }  , while
+BLOCK -> { ，EXP }  , {
+I32:
+PROGRAM -> PROGRAM BLOCK ， , #identifer
+PROGRAM -> PROGRAM BLOCK ， , char
+PROGRAM -> PROGRAM BLOCK ， , float
+PROGRAM -> PROGRAM BLOCK ， , if
+PROGRAM -> PROGRAM BLOCK ， , int
+PROGRAM -> PROGRAM BLOCK ， , return
+PROGRAM -> PROGRAM BLOCK ， , while
+PROGRAM -> PROGRAM BLOCK ， , {
+I33:
+MAIN -> PROGRAM END ， , #
+I34:
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , char
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , char
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , float
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , float
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , if
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , if
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , int
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , int
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , return
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , return
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , while
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , while
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , {
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , {
+PROGRAM -> PROGRAM EXP ， , #identifer
+PROGRAM -> PROGRAM EXP ， , char
+PROGRAM -> PROGRAM EXP ， , float
+PROGRAM -> PROGRAM EXP ， , if
+PROGRAM -> PROGRAM EXP ， , int
+PROGRAM -> PROGRAM EXP ， , return
+PROGRAM -> PROGRAM EXP ， , while
+PROGRAM -> PROGRAM EXP ， , {
+I35:
+PROGRAM -> PROGRAM IFBLOCK ， , #identifer
+PROGRAM -> PROGRAM IFBLOCK ， , char
+PROGRAM -> PROGRAM IFBLOCK ， , float
+PROGRAM -> PROGRAM IFBLOCK ， , if
+PROGRAM -> PROGRAM IFBLOCK ， , int
+PROGRAM -> PROGRAM IFBLOCK ， , return
+PROGRAM -> PROGRAM IFBLOCK ， , while
+PROGRAM -> PROGRAM IFBLOCK ， , {
+I36:
+PROGRAM -> PROGRAM STATEMENT ， , #identifer
+PROGRAM -> PROGRAM STATEMENT ， , char
+PROGRAM -> PROGRAM STATEMENT ， , float
+PROGRAM -> PROGRAM STATEMENT ， , if
+PROGRAM -> PROGRAM STATEMENT ， , int
+PROGRAM -> PROGRAM STATEMENT ， , return
+PROGRAM -> PROGRAM STATEMENT ， , while
+PROGRAM -> PROGRAM STATEMENT ， , {
+I37:
+PROGRAM -> PROGRAM WHILEBLOCK ， , #identifer
+PROGRAM -> PROGRAM WHILEBLOCK ， , char
+PROGRAM -> PROGRAM WHILEBLOCK ， , float
+PROGRAM -> PROGRAM WHILEBLOCK ， , if
+PROGRAM -> PROGRAM WHILEBLOCK ， , int
+PROGRAM -> PROGRAM WHILEBLOCK ， , return
+PROGRAM -> PROGRAM WHILEBLOCK ， , while
+PROGRAM -> PROGRAM WHILEBLOCK ， , {
+I38:
+VARLIST -> VARLIST , ，#identifer  , ,
+VARLIST -> VARLIST , ，#identifer  , ;
+I39:
+SEMICOLON -> ; ， , #identifer
+SEMICOLON -> ; ， , char
+SEMICOLON -> ; ， , float
+SEMICOLON -> ; ， , if
+SEMICOLON -> ; ， , int
+SEMICOLON -> ; ， , return
+SEMICOLON -> ; ， , while
+SEMICOLON -> ; ， , {
+I40:
+STATEMENT -> VARLIST SEMICOLON ， , #identifer
+STATEMENT -> VARLIST SEMICOLON ， , char
+STATEMENT -> VARLIST SEMICOLON ， , float
+STATEMENT -> VARLIST SEMICOLON ， , if
+STATEMENT -> VARLIST SEMICOLON ， , int
+STATEMENT -> VARLIST SEMICOLON ， , return
+STATEMENT -> VARLIST SEMICOLON ， , while
+STATEMENT -> VARLIST SEMICOLON ， , {
+I41:
+WHILEBLOCK -> WHILECAUSE BLOCK ， , #identifer
+WHILEBLOCK -> WHILECAUSE BLOCK ， , char
+WHILEBLOCK -> WHILECAUSE BLOCK ， , float
+WHILEBLOCK -> WHILECAUSE BLOCK ， , if
+WHILEBLOCK -> WHILECAUSE BLOCK ， , int
+WHILEBLOCK -> WHILECAUSE BLOCK ， , return
+WHILEBLOCK -> WHILECAUSE BLOCK ， , while
+WHILEBLOCK -> WHILECAUSE BLOCK ， , {
+I42:
+VARLIST -> char #identifer ， , ,
+VARLIST -> char #identifer ， , ;
+I43:
+VARLIST -> float #identifer ， , ,
+VARLIST -> float #identifer ， , ;
+I44:
+IFCAUSE -> if ( ，#identifer #operator #identifer #operator #identifer )  , {
+I45:
+VARLIST -> int #identifer ， , ,
+VARLIST -> int #identifer ， , ;
+I46:
+END -> return #number ，; }  , #
+I47:
+WHILECAUSE -> while ( ，#identifer #operator #identifer #operator #identifer )  , {
+I48:
+EXP -> #identifer ，#operator #identifer SEMICOLON  , #identifer
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> #identifer ，#operator #identifer SEMICOLON  , }
+EXP -> #identifer ，#operator #identifer #operator #identifer SEMICOLON  , }
+I49:
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , }
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , }
+BLOCK -> { EXP ，}  , #identifer
+BLOCK -> { EXP ，}  , char
+BLOCK -> { EXP ，}  , float
+BLOCK -> { EXP ，}  , if
+BLOCK -> { EXP ，}  , int
+BLOCK -> { EXP ，}  , return
+BLOCK -> { EXP ，}  , while
+BLOCK -> { EXP ，}  , {
+I50:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , char
+SEMICOLON -> ，;  , float
+SEMICOLON -> ，;  , if
+SEMICOLON -> ，;  , int
+SEMICOLON -> ，;  , return
+SEMICOLON -> ，;  , while
+SEMICOLON -> ，;  , {
+EXP -> #identifer #operator #identifer ，SEMICOLON  , #identifer
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , #identifer
+EXP -> #identifer #operator #identifer ，SEMICOLON  , char
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , char
+EXP -> #identifer #operator #identifer ，SEMICOLON  , float
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , float
+EXP -> #identifer #operator #identifer ，SEMICOLON  , if
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , if
+EXP -> #identifer #operator #identifer ，SEMICOLON  , int
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , int
+EXP -> #identifer #operator #identifer ，SEMICOLON  , return
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , return
+EXP -> #identifer #operator #identifer ，SEMICOLON  , while
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , while
+EXP -> #identifer #operator #identifer ，SEMICOLON  , {
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , {
+I51:
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , char
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , char
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , float
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , float
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , if
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , if
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , int
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , int
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , return
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , return
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , while
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , while
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , {
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , {
+I52:
+ELSECAUSE -> IFCAUSE BLOCK else ， , {
+I53:
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP ，#identifer #operator #identifer SEMICOLON  , }
+EXP -> EXP ，#identifer #operator #identifer #operator #identifer SEMICOLON  , }
+BLOCK -> { EXP ，}  , #identifer
+BLOCK -> { EXP ，}  , char
+BLOCK -> { EXP ，}  , else
+BLOCK -> { EXP ，}  , float
+BLOCK -> { EXP ，}  , if
+BLOCK -> { EXP ，}  , int
+BLOCK -> { EXP ，}  , return
+BLOCK -> { EXP ，}  , while
+BLOCK -> { EXP ，}  , {
+I54:
+VARLIST -> VARLIST , #identifer ， , ,
+VARLIST -> VARLIST , #identifer ， , ;
+I55:
+IFCAUSE -> if ( #identifer ，#operator #identifer #operator #identifer )  , {
+I56:
+END -> return #number ; ，}  , #
+I57:
+WHILECAUSE -> while ( #identifer ，#operator #identifer #operator #identifer )  , {
+I58:
+EXP -> #identifer #operator ，#identifer SEMICOLON  , #identifer
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> #identifer #operator ，#identifer SEMICOLON  , }
+EXP -> #identifer #operator ，#identifer #operator #identifer SEMICOLON  , }
+I59:
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer ，#operator #identifer SEMICOLON  , }
+EXP -> EXP #identifer ，#operator #identifer #operator #identifer SEMICOLON  , }
+I60:
+BLOCK -> { EXP } ， , #identifer
+BLOCK -> { EXP } ， , char
+BLOCK -> { EXP } ， , float
+BLOCK -> { EXP } ， , if
+BLOCK -> { EXP } ， , int
+BLOCK -> { EXP } ， , return
+BLOCK -> { EXP } ， , while
+BLOCK -> { EXP } ， , {
+I61:
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , #identifer
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , char
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , float
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , if
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , int
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , return
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , while
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , {
+I62:
+EXP -> #identifer #operator #identifer SEMICOLON ， , #identifer
+EXP -> #identifer #operator #identifer SEMICOLON ， , char
+EXP -> #identifer #operator #identifer SEMICOLON ， , float
+EXP -> #identifer #operator #identifer SEMICOLON ， , if
+EXP -> #identifer #operator #identifer SEMICOLON ， , int
+EXP -> #identifer #operator #identifer SEMICOLON ， , return
+EXP -> #identifer #operator #identifer SEMICOLON ， , while
+EXP -> #identifer #operator #identifer SEMICOLON ， , {
+I63:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , char
+SEMICOLON -> ，;  , float
+SEMICOLON -> ，;  , if
+SEMICOLON -> ，;  , int
+SEMICOLON -> ，;  , return
+SEMICOLON -> ，;  , while
+SEMICOLON -> ，;  , {
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , char
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , char
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , float
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , float
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , if
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , if
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , int
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , int
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , return
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , return
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , while
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , while
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , {
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , {
+I64:
+BLOCK -> { EXP } ， , #identifer
+BLOCK -> { EXP } ， , char
+BLOCK -> { EXP } ， , else
+BLOCK -> { EXP } ， , float
+BLOCK -> { EXP } ， , if
+BLOCK -> { EXP } ， , int
+BLOCK -> { EXP } ， , return
+BLOCK -> { EXP } ， , while
+BLOCK -> { EXP } ， , {
+I65:
+IFCAUSE -> if ( #identifer #operator ，#identifer #operator #identifer )  , {
+I66:
+END -> return #number ; } ， , #
+I67:
+WHILECAUSE -> while ( #identifer #operator ，#identifer #operator #identifer )  , {
+I68:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , }
+EXP -> #identifer #operator #identifer ，SEMICOLON  , #identifer
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , #identifer
+EXP -> #identifer #operator #identifer ，SEMICOLON  , }
+EXP -> #identifer #operator #identifer ，#operator #identifer SEMICOLON  , }
+I69:
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator ，#identifer SEMICOLON  , }
+EXP -> EXP #identifer #operator ，#identifer #operator #identifer SEMICOLON  , }
+I70:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , char
+SEMICOLON -> ，;  , float
+SEMICOLON -> ，;  , if
+SEMICOLON -> ，;  , int
+SEMICOLON -> ，;  , return
+SEMICOLON -> ，;  , while
+SEMICOLON -> ，;  , {
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , #identifer
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , char
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , float
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , if
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , int
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , return
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , while
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , {
+I71:
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , char
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , float
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , if
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , int
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , return
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , while
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , {
+I72:
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , #identifer
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , char
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , float
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , if
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , int
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , return
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , while
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , {
+I73:
+IFCAUSE -> if ( #identifer #operator #identifer ，#operator #identifer )  , {
+I74:
+WHILECAUSE -> while ( #identifer #operator #identifer ，#operator #identifer )  , {
+I75:
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , #identifer
+EXP -> #identifer #operator #identifer #operator ，#identifer SEMICOLON  , }
+I76:
+SEMICOLON -> ; ， , #identifer
+SEMICOLON -> ; ， , }
+I77:
+EXP -> #identifer #operator #identifer SEMICOLON ， , #identifer
+EXP -> #identifer #operator #identifer SEMICOLON ， , }
+I78:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , }
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator #identifer ，SEMICOLON  , }
+EXP -> EXP #identifer #operator #identifer ，#operator #identifer SEMICOLON  , }
+I79:
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , #identifer
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , char
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , float
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , if
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , int
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , return
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , while
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , {
+I80:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , char
+SEMICOLON -> ，;  , float
+SEMICOLON -> ，;  , if
+SEMICOLON -> ，;  , int
+SEMICOLON -> ，;  , return
+SEMICOLON -> ，;  , while
+SEMICOLON -> ，;  , {
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , char
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , float
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , if
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , int
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , return
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , while
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , {
+I81:
+IFCAUSE -> if ( #identifer #operator #identifer #operator ，#identifer )  , {
+I82:
+WHILECAUSE -> while ( #identifer #operator #identifer #operator ，#identifer )  , {
+I83:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , }
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , #identifer
+EXP -> #identifer #operator #identifer #operator #identifer ，SEMICOLON  , }
+I84:
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator #identifer #operator ，#identifer SEMICOLON  , }
+I85:
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , #identifer
+EXP -> EXP #identifer #operator #identifer SEMICOLON ， , }
+I86:
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , #identifer
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , char
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , float
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , if
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , int
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , return
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , while
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , {
+I87:
+IFCAUSE -> if ( #identifer #operator #identifer #operator #identifer ，)  , {
+I88:
+WHILECAUSE -> while ( #identifer #operator #identifer #operator #identifer ，)  , {
+I89:
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , #identifer
+EXP -> #identifer #operator #identifer #operator #identifer SEMICOLON ， , }
+I90:
+SEMICOLON -> ，;  , #identifer
+SEMICOLON -> ，;  , }
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , #identifer
+EXP -> EXP #identifer #operator #identifer #operator #identifer ，SEMICOLON  , }
+I91:
+IFCAUSE -> if ( #identifer #operator #identifer #operator #identifer ) ， , {
+I92:
+WHILECAUSE -> while ( #identifer #operator #identifer #operator #identifer ) ， , {
+I93:
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , #identifer
+EXP -> EXP #identifer #operator #identifer #operator #identifer SEMICOLON ， , }

@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+int main()
+{
+abcd123
+123abc
+a+=b;
+	int a,b,c,d;
+  	float fa,fb,fc,fd;
+  	if(fa += fb+fc)
+    {
+     	fa = fb+fc; 
+    }
+  	else
+    {
+     	fa=fc+fd; 
+    }
+  	char ca,cb,cc,cd;
+  	while(ca == cb+cc)
+    {
+     	ca = cc+cd; 
+    }
+  if(a == d+a) {a=b+c;}
+	return 0; 
+}
